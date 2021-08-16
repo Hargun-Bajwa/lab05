@@ -53,7 +53,6 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("invalidMessage",true);
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request,response);
         }
-        
          AccountService accountCheckSerivce = new AccountService();
         User user = (User) accountCheckSerivce.login(username,password);
          
